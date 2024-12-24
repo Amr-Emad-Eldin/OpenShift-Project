@@ -1,0 +1,97 @@
+.admin-dashboard {
+  margin: 20px;
+}
+
+.admin-title {
+  color: #512da8;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-table th, .order-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #512da8;
+  color: white;
+}
+
+.order-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.actions button {
+  background-color: #5AB6DE;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.actions button:hover {
+  background-color: #44809a;
+}
+
+.status-modal, .reassign-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.status-modal h2, .reassign-modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #512da8;
+}
+
+.status-modal select, .reassign-modal select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.status-modal button, .reassign-modal button {
+  background-color: #512da8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-modal button:hover, .reassign-modal button:hover {
+  background-color: #5c6bc0;
+}
+
+.status-modal button:last-child, .reassign-modal button:last-child {
+  background-color: #e74c3c;
+}
+
+.status-modal button:last-child:hover, .reassign-modal button:last-child:hover {
+  background-color: #c0392b;
+}

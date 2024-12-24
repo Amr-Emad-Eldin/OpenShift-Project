@@ -1,0 +1,31 @@
+<div *ngIf="orders.length > 0; else noOrders" class="order-container-wrapper">
+  <h1 class="orders-header">Orders Assigned to {{ courier }}</h1>
+  <a class="back-button" (click)="goBack()">Back</a>
+  <div *ngFor="let order of orders" class="order-container">
+    <div class="order-card">
+      <p><strong>Pickup Location:</strong> {{ order.pickupLocation }}</p>
+      <p><strong>Dropoff Location:</strong> {{ order.dropoffLocation }}</p>
+      <p><strong>Package Details:</strong> {{ order.packageDetails }}</p>
+      <p><strong>Delivery Time:</strong> {{ order.deliveryTime | date: 'short' }}</p>
+      <p><strong>Status:</strong> {{ order.status }}</p>
+
+      <button *ngIf="order.status === 'PENDING'" (click)="acceptOrder(order._id)">Accept Order</button>
+
+      <div *ngIf="order.status === 'ACCEPTED' || order.status === 'PICKED UP' || order.status === 'IN TRANSIT'">
+        <label for="statusSelect-{{order._id}}">Update Status:</label>
+        <select id="statusSelect-{{order._id}}" #statusSelect>
+          <option value="PICKED UP">Picked Up</option>
+          <option value="IN TRANSIT">In Transit</option>
+          <option value="DELIVERED">Delivered</option>
+        </select>
+        <button class="update-status" (click)="updateOrderStatus(order._id, statusSelect.value)">
+          Update Status
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noOrders>
+  <p>No orders assigned to you currently.</p>
+</ng-template>

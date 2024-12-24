@@ -1,0 +1,152 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f3f5f9, #e7ecf4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  align-self: center;
+  margin-left: 150px;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  background-color: #5AB6DE;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #44809A;
+  transform: scale(1.05);
+}
+
+.order {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.order p {
+  font-size: 15px;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.order p strong {
+  color: #333;
+}
+
+button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e0533b;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+p.no-orders {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.reassign-container {
+  margin-top: 10px;
+}
+
+.reassign-container select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+}
+
+.reassign-container button {
+  background-color: #5AB6DE;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reassign-container button:hover {
+  background-color: #44809a;
+}
+

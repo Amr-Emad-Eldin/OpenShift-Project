@@ -1,0 +1,194 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f3f5f9, #e7ecf4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.order-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.orders-header {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #5a67d8;
+  margin-bottom: 20px;
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.order-card {
+  background: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-in-out;
+  margin: 0 auto;
+
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.order-card p {
+  font-size: 15px;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.order-card p strong {
+  color: #333;
+}
+
+button {
+  background-color: #5a67d8;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4c51bf;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+.back-button {
+  background-color: #ff6347;
+  align-self: flex-start;
+  margin-left: 160px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #e0533b;
+  transform: scale(1.05);
+}
+
+/* Update Status Button */
+.update-status {
+  background-color: #38a169;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 10px;
+  display: block;
+}
+
+.update-status:hover {
+  background-color: #2f855a;
+  transform: scale(1.05);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f4ff;
+  border: 1px solid #d1d9ff;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+  margin-top: 10px;
+  transition: border 0.3s ease;
+}
+
+select:hover,
+select:focus {
+  border: 1px solid #5a67d8;
+}
+
+/* No Orders Message */
+p.no-orders {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .order-container {
+    width: 95%;
+  }
+
+  .orders-header {
+    font-size: 24px;
+  }
+
+  button,
+  .back-button,
+  .update-status {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

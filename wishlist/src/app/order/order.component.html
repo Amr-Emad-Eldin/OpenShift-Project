@@ -1,0 +1,27 @@
+<div class="parent">
+  <div class="container" id="createOrderContainer">
+    <div class="form-container order-form">
+
+      <form>
+        <h1>Create Order</h1>
+        <p>Enter the order details below</p>
+
+        <input type="text" name="pickupLocation" [(ngModel)]="createOrderObj.pickupLocation" placeholder="Pickup Location" required>
+        <input type="text" name="dropoffLocation" [(ngModel)]="createOrderObj.dropoffLocation" placeholder="Drop-off Location" required>
+        <textarea name="packageDetails" [(ngModel)]="createOrderObj.packageDetails" placeholder="Package Details" rows="3" required></textarea>
+        <input type="datetime-local" name="deliveryTime" [(ngModel)]="createOrderObj.deliveryTime" id="deliveryTime" required>
+        <select name="courier" [(ngModel)]="createOrderObj.courier" required>
+          <option value="" disabled>Select Courier</option>
+          <option *ngFor="let courier of couriers" [value]="courier">{{ courier }}</option>
+        </select>
+
+        <button (click)="onSubmit()" type="submit">Submit Order</button>
+        <div class="buttons">
+          <button (click)="logout()" class="logout-button">Logout</button>
+          <button  (click)="orderDetails()" class="details-button" >Your Orders</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

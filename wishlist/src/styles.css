@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff); ;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.orders-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
